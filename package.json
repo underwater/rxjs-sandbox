@@ -1,0 +1,22 @@
+{
+  "name": "ts-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx ./index.ts -w",
+    "clean": "rimraf ./node_modules"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.8.1",
+    "tsc": "^2.0.4",
+    "tsx": "^3.12.7",
+    "rimraf": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.2"
+  }
+}
