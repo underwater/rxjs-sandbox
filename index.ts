@@ -1,5 +1,7 @@
 import readline from 'readline';
-import * as Rx from 'rxjs';
+import { NumberExamples as NumberExamples } from './Examples/number-examples';
+import { SwitchExamples } from './Examples/switch-examples';
+import { TakeExamples } from './Examples/take-examples';
 
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
@@ -9,37 +11,19 @@ process.stdin.on('keypress', (str, key) => {
         // Exit the process on Ctrl+C
         process.exit();
     } else if (key.name === 'space') {
-        console.log('starting work');
-        ObsExample();
+        console.log('starting examples');
+
+        // NumberExamples();
+         SwitchExamples();
+        // TakeExamples();
+        
         console
     }
 });
 
-console.log('Press space to print "Hello World", or Ctrl+C to exit.');
+console.log('Press space to start examples, or Ctrl+C to exit.');
 
 
 
 
-function ObsExample() {
-    const numbers$ = Rx.Observable.create((observer: Rx.Observer<number>) => {
-        let count = 0;
-        const interval = setInterval(() => {
-            observer.next(count++);
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }
-    );
-
-    numbers$.subscribe((value: number) => {
-        console.log(`value: ${value}`);
-    }
-    );
-
-
-    numbers$.subscribe((value: number) => {
-        console.log(`2 x value: ${2* value}`);
-    })
-
-}
 
