@@ -14,9 +14,9 @@ process.stdin.on('keypress', (str, key) => {
         console.log('starting examples');
 
         // NumberExamples();
-         SwitchExamples();
+        // SwitchExamples();
         // TakeExamples();
-        
+        TypescriptExamples();
         console
     }
 });
